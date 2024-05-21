@@ -86,6 +86,7 @@ export function Home() {
                         <form className="email-form">
                             <h2>Login</h2>
                             <TextField sx={{ width: "100%", mt: 4 }} id="outlined-basic" label="Email address" variant="outlined" />
+                            <TextField sx={{ width: "100%", mt: 4 }} id="outlined-basic" label="Password" variant="outlined" />
                             <button type="submit">Proceed</button>
                         </form>
                     </div>
