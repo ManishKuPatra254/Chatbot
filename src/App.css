@@ -43,6 +43,7 @@
     height: 100%;
     background-size: cover;
     object-fit: cover;
+    background-repeat: no-repeat;
     overflow: hidden;
     background-position: center;
     transition: left 0.5s ease-in-out;
@@ -56,6 +57,14 @@
     position: relative;
     width: 800px;
     height: 100px;
+    overflow: hidden;
+    margin: 20px auto;
+}
+
+.carousel-content-1 {
+    position: relative;
+    width: 800px;
+    height: 30px;
     overflow: hidden;
     margin: 20px auto;
 }
@@ -75,14 +84,12 @@
 }
 
 .sub_container_2 {
-    /* border: 3px solid cadetblue; */
     background-color: #f4fbff;
     width: 40%;
     height: auto;
 }
 
 .email-form-container {
-    /* border: 1px solid black; */
     display: flex;
     align-items: center;
     justify-content: center;
