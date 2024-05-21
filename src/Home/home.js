@@ -1,22 +1,33 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import '../App.css'
 import main_logo from '../assets/main_logo.svg'
+import p1 from '../assets/content-pensive-young-man-reading-internet-news-smartphone.jpg'
+import p2 from '../assets/joyful-guy-texting-message-smartphone.jpg'
+import p3 from '../assets/corporate-workers-brainstorming-together.jpg'
 import { TextField } from '@mui/material';
 
 export function Home() {
 
 
     const images = [
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmu2QkdVKnN70ICNtdXAUD7Bugm6UjGsKaS1FcGOKOzA&s',
-        'https://www.forbesindia.com/media/images/2023/Sep/img_218241_workfromhome.jpg',
-        'https://fjwp.s3.amazonaws.com/blog/wp-content/uploads/2018/07/01153710/benefits-of-working-from-home.jpg'
+        p1,
+        p2,
+        p3,
+    ];
+
+    const maincontent = [
+        'SMS Solutions',
+        'RCS Platform',
+        'Unlocking Potential with Celetel'
     ];
 
     const content = [
-        'Content for Image 1',
-        'Content for Image 2',
-        'Content for Image 3'
+        'where we transform simple text messages into powerful communication tools that connect businesses with their audience like never before.',
+        'Redefine how you engage with your audience using RCS messaging, the next-generation of interactive communication',
+        'Explore the limitless possibilities of effective communication with Celetel as your trusted partner. Lets unlock your business full potential together'
     ];
+
+
 
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -45,6 +56,18 @@ export function Home() {
                                 ></div>
                             ))}
                         </div>
+
+                        <div className="carousel-content-1">
+                            {maincontent.map((text, index) => (
+                                <div
+                                    key={index}
+                                    className={`carousel-text ${index === currentIndex ? 'active' : ''}`}
+                                >
+                                    <h3>{text}</h3>
+                                </div>
+                            ))}
+                        </div>
+
                         <div className="carousel-content">
                             {content.map((text, index) => (
                                 <div
